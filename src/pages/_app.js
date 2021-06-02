@@ -1,5 +1,5 @@
-import 'tailwindcss/tailwind.css';
 import { ContextProvider } from '../services/ContextProvider';
+import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
     return (

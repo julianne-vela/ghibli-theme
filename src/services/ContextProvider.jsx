@@ -6,6 +6,11 @@ const GhibliContext = createContext();
 export function ContextProvider({ children }) {
     const [loading, setLoading] = useState(true);
     const [characters, setCharacters] = useState([]);
+    const [theme, setTheme] = useState('');
+
+    // const handleThemeChange = ({target: {value}}) => {
+
+    // }
 
     useEffect(() => {
         getCharacters()

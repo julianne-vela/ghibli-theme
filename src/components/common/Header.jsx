@@ -1,9 +1,16 @@
+import { darkMode } from '../../../tailwind.config';
 import Link from './Link';
 
 function Header() {
+    const handleThemeChange = () => {
+        console.log('Theme changed!');
+    };
     return (
-        <header>
+        <header className='bg-black'>
             <h1>Ghiblist</h1>
+            <button className='btn' onClick={handleThemeChange}>
+                Toggle Dark Mode
+            </button>
             <nav>
                 <Link href='/'>Home</Link>
                 <Link href='/characters'>Characters</Link>

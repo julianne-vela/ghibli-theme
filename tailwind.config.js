@@ -2,13 +2,10 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
     mode: 'jit',
-    purge: [
-        './pages/**/*.{js,ts,jsx,tsx}',
-        './components/**/*.{js,ts,jsx,tsx}',
-    ],
+    purge: ['./src/**/*.{js,ts,jsx,tsx}'],
     presets: [],
     prefix: 'tw-',
-    darkMode: false, // or 'media' or 'class'
+    darkMode: 'class', // or 'media' or 'class'
     theme: {
         screens: {
             sm: '640px',
@@ -213,7 +210,16 @@ module.exports = {
             150: '1.5',
             200: '2',
         },
-        container: {},
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                lg: '4rem',
+                xl: '5rem',
+                '2xl': '6rem',
+            },
+        },
         cursor: {
             auto: 'auto',
             default: 'default',

@@ -9,8 +9,8 @@ function Home() {
     return (
         <>
             <Header />
-            <main className='container'>
-                <aside>
+            <main className='container mx-auto grid gridTemplateColumns.12 gridTemplateRows.12 gap-1 justify-center items-center'>
+                <aside className='grid col-span-4'>
                     <section>PageNav</section>
                     <section>Search</section>
                     <section>Filter</section>
@@ -19,7 +19,7 @@ function Home() {
                 {loading ? (
                     'Loading...'
                 ) : (
-                    <section className='listView'>
+                    <section className='grid col-span-8'>
                         <CharacterList />
                     </section>
                 )}
