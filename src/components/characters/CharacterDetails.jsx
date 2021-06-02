@@ -7,9 +7,6 @@ function CharacterDetails() {
     const [character, setCharacter] = useState({});
     const [loading, setLoading] = useState(true);
 
-    // const router = useRouter();
-    // const { id } = await router.query;
-
     useEffect(() => {
         const { id } = router.query;
         getById(id)

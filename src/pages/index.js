@@ -4,7 +4,7 @@ import Header from '../components/common/Header';
 import { useContextProvider } from '../services/ContextProvider';
 
 function Home() {
-    const { loading, characters } = useContextProvider();
+    const { loading } = useContextProvider();
 
     return (
         <>
@@ -16,9 +16,13 @@ function Home() {
                     <section>Filter</section>
                     <section>Sort</section>
                 </aside>
-                <section className='listView'>
-                    <CharacterList />
-                </section>
+                {loading ? (
+                    'Loading...'
+                ) : (
+                    <section className='listView'>
+                        <CharacterList />
+                    </section>
+                )}
             </main>
         </>
     );
