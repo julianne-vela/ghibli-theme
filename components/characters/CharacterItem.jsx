@@ -3,7 +3,7 @@ function CharacterItem(character) {
         <li className='listItem'>
             <span>Name: {character.name}</span>
             <span>Age: {character.age}</span>
-            <span>Films: {character.films}</span>
+            {/* <span>Film: {character.film}</span> */}
         </li>
     );
 }
