@@ -4,21 +4,25 @@ import Header from '../components/common/Header';
 import { useContextProvider } from '../services/ContextProvider';
 
 function Home() {
-    const { loading, characters } = useContextProvider();
+    const { loading } = useContextProvider();
 
     return (
         <>
             <Header />
-            <main className='container'>
-                <aside>
+            <main className='container mx-auto grid gridTemplateColumns.12 gridTemplateRows.12 gap-1 justify-center items-center'>
+                <aside className='grid col-span-4'>
                     <section>PageNav</section>
                     <section>Search</section>
                     <section>Filter</section>
                     <section>Sort</section>
                 </aside>
-                <section className='listView'>
-                    <CharacterList />
-                </section>
+                {loading ? (
+                    'Loading...'
+                ) : (
+                    <section className='grid col-span-8'>
+                        <CharacterList />
+                    </section>
+                )}
             </main>
         </>
     );
