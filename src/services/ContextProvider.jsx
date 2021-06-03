@@ -8,9 +8,13 @@ export function ContextProvider({ children }) {
     const [characters, setCharacters] = useState([]);
     const [theme, setTheme] = useState('');
 
-    // const handleThemeChange = ({target: {value}}) => {
-
-    // }
+    const handleThemeChange = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    };
 
     useEffect(() => {
         getCharacters()
@@ -18,7 +22,7 @@ export function ContextProvider({ children }) {
             .finally(() => setLoading(false));
     }, []);
 
-    let sharedState = { loading, characters };
+    let sharedState = { loading, characters, theme, handleThemeChange };
 
     return (
         <GhibliContext.Provider value={sharedState}>

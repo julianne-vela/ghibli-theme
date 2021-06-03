@@ -1,15 +1,16 @@
-import { darkMode } from '../../../tailwind.config';
+import { useContextProvider } from '../../services/ContextProvider';
 import Link from './Link';
 
 function Header() {
-    const handleThemeChange = () => {
-        console.log('Theme changed!');
-    };
+    const { theme, handleThemeChange } = useContextProvider();
+
     return (
         <header className='bg-black'>
-            <h1>Ghiblist</h1>
+            <h1 className='light:text-black.bg-beige dark:text-black.bg-beige'>
+                Ghiblist
+            </h1>
             <button className='btn' onClick={handleThemeChange}>
-                Toggle Dark Mode
+                {theme === 'light' ? 'Dark' : 'Light'}
             </button>
             <nav>
                 <Link href='/'>Home</Link>
