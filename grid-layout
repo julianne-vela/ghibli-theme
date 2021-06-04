@@ -1,0 +1,55 @@
+/* Multi-Grid Display */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 5px 5px;
+}
+
+.Header {
+    grid-area: 1 / 1 / 3 / 13;
+}
+
+.Display {
+    grid-area: 3 / 4 / 13 / 13;
+}
+
+.Sidebar {
+    grid-area: 3 / 1 / 13 / 4;
+}
+
+.GhibliList {
+    grid-area: 4 / 5 / 12 / 11;
+}
+
+.PageNav {
+    grid-area: 3 / 1 / 4 / 4;
+}
+
+.Search {
+    grid-area: 4 / 1 / 5 / 4;
+}
+
+.Filter {
+    grid-area: 5 / 1 / 6 / 4;
+}
+
+.Sort {
+    grid-area: 6 / 1 / 7 / 4;
+}
+
+.SiteTitle {
+    grid-area: 1 / 1 / 3 / 6;
+}
+
+.SiteNav {
+    grid-area: 1 / 8 / 3 / 13;
+}
+
+.Logo {
+    grid-area: 1 / 6 / 3 / 8;
+}
+
+.Card {
+    grid-area: 5 / 6 / 7 / 8;
+}
